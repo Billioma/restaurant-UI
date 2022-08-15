@@ -1,46 +1,43 @@
 import React from 'react';
-import { FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi';
+import { FiMail, FiTwitter, FiInstagram } from 'react-icons/fi';
 
-import { FooterOverlay, Newsletter } from '../../components';
+import { FooterOverlay, /*Newsletter*/ } from '../../components';
 import { images } from '../../constants';
 import './Footer.css';
 
 const Footer = () => (
   <div className="app__footer section__padding" id="login">
     <FooterOverlay />
-    <Newsletter />
+    {/* <Newsletter /> */}
 
     <div className="app__footer-links">
       <div className="app__footer-links_contact">
         <h1 className="app__footer-headtext">Contact Us</h1>
-        <p className="p__opensans">2 K 53rd St, Tanke, Ilorin, Kwara</p>
-        <p className="p__opensans">+234 ***-***-4444</p>
-        <p className="p__opensans">+234 ***-***-5555</p>
+        <p className="p__opensans">6, Beatrice Anike Street, 
+          <br /> Off University Road,
+          <br /> Behind Bovas Filling Station,
+          <br /> Tanke Oke-Odo, Ilorin
+        </p>
+        <p className="p__opensans">+234 817-999-9978</p>
       </div>
 
-      <div className="app__footer-links_logo">LOGO
+      <div className="app__footer-links_logo">
+      <img src={images.loggo} alt="CLAYPOT_NG"/>
         <p className="p__opensans">&quot;The best way to find yourself is to lose yourself in the service of others.&quot;</p>
-        <img src={images.spoon} className="spoon__img" style={{ marginTop: 15 }} />
+        <img src={images.spoon} alt="spoon" className="spoon__img" style={{ marginTop: 15 }} />
         <div className="app__footer-links_icons">
-          <FiFacebook />
-          <FiTwitter />
-          <FiInstagram />
+          <a href="mailto:claypot.ng@gmail.com"><FiMail /></a>
+          <a href="https://twitter.com/Claypot_ng"><FiTwitter /></a>
+          <a href="https://www.instagram.com/claypot.ng/"><FiInstagram /></a>
         </div>
       </div>
 
       <div className="app__footer-links_work">
         <h1 className="app__footer-headtext">Working Hours</h1>
-        <p className="p__opensans">Monday-Friday:</p>
-        <p className="p__opensans">08:00 am - 12:00 am</p>
-        <p className="p__opensans">Saturday-Sunday:</p>
-        <p className="p__opensans">07:00 am - 11:00 pm</p>
+        <p className="p__opensans">Sunday-Saturday:</p>
+        <p className="p__opensans">10:00 AM - 10:00 PM</p>
       </div>
     </div>
-
-    <div className="footer__copyright">
-      <p className="p__opensans">2021 Gericht. All Rights reserved.</p>
-    </div>
-
   </div>
 );
 
